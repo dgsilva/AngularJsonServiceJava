@@ -1,0 +1,41 @@
+<div>
+    <label>Código</label><br>
+    <input type="text" [(ngModel)]="aluno.idAluno" name="idAluno" id="idAluno" placeholder="Digite código"><br>
+</div>
+
+<div>
+    <label>Nome:</label><br>
+    <input type="text" [(ngModel)]="aluno.nome" name="nome" id="nome" placeholder="Digite o seu nome"><br>
+ </div>
+
+ <div>
+    <label>Disciplina:</label><br>
+    <input type="text" [(ngModel)]="aluno.disciplina" name="disciplina" id="disciplina" placeholder="Digite a sua disciplina"><br>
+ </div>
+
+ <div>
+    <label>Nota 1:</label><br>
+    <input type="number" [(ngModel)]="aluno.nota1" name="nota1" id="nota1" placeholder="Digite a sua nota1"><br>
+ </div>
+
+ <div>
+    <label>Nota 2:</label><br>
+    <input type="number" [(ngModel)]="aluno.nota2" name="nota2" id="nota2" placeholder="Digite a sua nota2"><br>
+ </div>
+ <div>
+    <label>Media:</label><br>
+    <input type="number" [(ngModel)]="aluno.media" name="media" id="media" placeholder="Digite"><br>
+ </div>
+
+
+
+ <button (click)="calcular();">Calcular Media</button><br>
+ <button (click)="adicionar();">adicionar</button><br>
+ <button (click)="fullstack();">fullstack</button>
+ {{aluno|json}}
+
+ <li *ngFor="let item of alunos">
+    {{item.idAluno}}, {{item.nome}}, {{item.disciplina}}
+     {{item.nota1}},{{item.nota2}},{{item.media}},{{item.situacao}}
+
+</li>
